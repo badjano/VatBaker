@@ -21,11 +21,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7923296c2824d4541931d5cd26353e98, type: 3}
+        m_Texture: {fileID: 2800000, guid: 38996e83f499cb0419e65c21d4367ed8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTex:
-        m_Texture: {fileID: 2800000, guid: ac0c61e6ec20ad6448fc85119643e98b, type: 3}
+        m_Texture: {fileID: 2800000, guid: cd3014488547e8e438d82747db4cef98, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _VatNormalTex:
@@ -38,8 +38,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AnimationTimeOffset: 0.03
-    - _VatAnimFps: 10
+    - _AnimationTimeOffset: 0
+    - _VatAnimFps: 12
     - _VatAnimLength: 1.5000001
     m_Colors: []
   m_BuildTextureStacks: []

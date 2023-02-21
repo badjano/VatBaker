@@ -13,6 +13,7 @@ namespace VatBaker.Editor
 
         public GameObject gameObject;
         public Space space = Space.Self;
+        public int textureWidth = 512;
         public int animationFps = 5;
         public Shader sampleShader;
         
@@ -40,6 +41,7 @@ namespace VatBaker.Editor
             
             root.Add(gameObjectPropertyField);
             root.Add(new PropertyField() {bindingPath = nameof(space)});
+            root.Add(new PropertyField() {bindingPath = nameof(textureWidth)});
             root.Add(new PropertyField() {bindingPath = nameof(animationFps)});
             root.Add(new PropertyField() {bindingPath = nameof(sampleShader)});
             root.Add(_bakeButton);
@@ -82,7 +84,7 @@ namespace VatBaker.Editor
             foreach(var clip in _clips)
             {
                 var assetName = $"{gameObject.name}_{clip.name}";
-                var (posTex, normTex) = VatBakerCore.BakeClip(assetName, gameObject, _skin, clip, animationFps, space);
+                var (posTex, normTex) = VatBakerCore.BakeClip(assetName, gameObject, _skin, clip, textureWidth, animationFps, space);
                 VatBakerCore.GenerateAssets(assetName, _skin, animationFps, clip.length, sampleShader, posTex, normTex);
             }
         }

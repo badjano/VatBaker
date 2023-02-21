@@ -18,10 +18,11 @@ inline float CalcVatAnimationTime(float time)
 
 inline float4 CalcVatTexCoord(uint vertexId, float animationTime)
 {
-    float x = vertexId + 0.5;
-    float y = animationTime + 0.5;
+    uint blockIndex = floor(vertexId * _VatPositionTex_TexelSize.x);
+    float x = vertexId % _VatPositionTex_TexelSize.z + 0.5;
+    float y = animationTime + ceil(_VatAnimLength * _VatAnimFps) * blockIndex + 0.5;
     
-    return float4(x, y, 0, 0) * _VatPositionTex_TexelSize;   
+    return frac(float4(x, y, 0, 0) * _VatPositionTex_TexelSize);   
 }
 
 inline float3 GetVatPosition(uint vertexId, float animationTime)
