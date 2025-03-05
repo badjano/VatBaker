@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace VatBaker.Editor
+namespace VatBaker
 {
     public readonly struct TransformCacheScope : IDisposable
     {

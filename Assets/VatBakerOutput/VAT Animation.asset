@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0394e22a0fce4e0a9d6a1703d4f14cc3, type: 3}
+  m_Name: VAT Animation
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: idle
+  <PositionTexture>k__BackingField: {fileID: 2800000, guid: c8a99c177b516f343953f11ab2e37607, type: 2}
+  <NormalTexture>k__BackingField: {fileID: 2800000, guid: b91a9e1838f75cf49967a718e50fdb57, type: 2}
+  <Length>k__BackingField: 1.5
+  <FPS>k__BackingField: 12
+  <Loop>k__BackingField: 1
+  <OnFinishAnimation>k__BackingField: {fileID: 11400000}

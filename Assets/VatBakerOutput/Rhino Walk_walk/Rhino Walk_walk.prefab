@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 912739793880827419}
   - component: {fileID: 9121198415243774071}
   - component: {fileID: 3685531657589013093}
+  - component: {fileID: 2214081567969571318}
   m_Layer: 0
   m_Name: Rhino Walk_walk
   m_TagString: Untagged
@@ -25,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6373316158736357749}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &9121198415243774071
 MeshRenderer:
@@ -83,3 +84,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6373316158736357749}
   m_Mesh: {fileID: 1389332836636915301, guid: 9ae9469995222764288e91d40fa94345, type: 3}
+--- !u!114 &2214081567969571318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373316158736357749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac42750f2c6044b6b6a8608e3c5b3247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 912739793880827419}
+  shader: {fileID: -6465566751694194690, guid: d85cdedf65c114b44afe494241a84749, type: 3}
+  mainTexture: {fileID: 2800000, guid: 38996e83f499cb0419e65c21d4367ed8, type: 3}
+  vatAnimator: {fileID: 11400000, guid: 67dcd938458c3ea4b954ab0f50d51c6f, type: 2}

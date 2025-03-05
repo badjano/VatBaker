@@ -1,10 +1,11 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace VatBaker.Editor
+namespace VatBaker
 {
     public class VatBakerWindowForAnimation : EditorWindow
     {
@@ -77,13 +78,15 @@ namespace VatBaker.Editor
 
             string NotFoundMessage(string target) => $"{target} is not found at GameObject[{gameObject.name}].";
         }
-        
+
 
         public void Bake()
         {
             foreach(var clip in _clips)
             {
-                var assetName = $"{gameObject.name}_{clip.name}";
+                var objName = gameObject.name.Replace("_", "-");
+                var clipName = clip.name.Replace("_", "-");
+                var assetName = $"{objName}_{clipName}_{animationFps}_{textureWidth}";
                 var (posTex, normTex) = VatBakerCore.BakeClip(assetName, gameObject, _skin, clip, textureWidth, animationFps, space);
                 VatBakerCore.GenerateAssets(assetName, _skin, animationFps, clip.length, sampleShader, posTex, normTex);
             }
